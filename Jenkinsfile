@@ -15,8 +15,7 @@ pipeline {
         success {
           emailext(
 	   subject: "${env.JOB_NAME} [${env.BUILD_NUMBER}] Successfull",
-           body: "${env.JOB_NAME} [${env.BUILD_NUMBER}] ${env.BUILD_URL}"
-           
+           body: "${env.JOB_NAME} [${env.BUILD_NUMBER}] ${env.BUILD_URL}",
             to: "devopstrainingblr@gmail.com"
           )
         }
