@@ -16,16 +16,14 @@ pipeline {
           emailext(
 	   subject: "${env.JOB_NAME} [${env.BUILD_NUMBER}] Successfull",
            body: "${env.JOB_NAME} [${env.BUILD_NUMBER}] ${env.BUILD_URL}",
-            to: "devopstrainingblr@gmail.com",
-	    bcc:"mithunreddytechnologies@gmail.com"
+            to: "$DEFAULT_RECIPIENTS,devopstrainingblr@gmail.com
           )
         }
 	failure{
 	   emailext(
 	   subject: "${env.JOB_NAME} [${env.BUILD_NUMBER}] Successfull",
            body: "${env.JOB_NAME} [${env.BUILD_NUMBER}] ${env.BUILD_URL}",
-            to: "devopstrainingblr@gmail.com",
-            bcc:"mithunreddytechnologies@gmail.com"
+            to: "devopstrainingblr@gmail.com"
             )		   
 		}
       }
