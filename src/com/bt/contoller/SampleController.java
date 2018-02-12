@@ -25,5 +25,5 @@ public class SampleController {
 
 		return js.toString();
 
-	
+	}
 }
