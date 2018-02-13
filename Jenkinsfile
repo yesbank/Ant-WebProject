@@ -6,7 +6,7 @@ pipeline {
         stage('build') {
             steps {
 		echo "My Branch Name: ${env.BRANCH_NAME}"
-                sh 'ant'
+                sh 'ant -f build-mt.xml'
 	    }
 	}
     }
@@ -21,7 +21,7 @@ pipeline {
         }
 	failure{
 	   emailext(
-	   subject: "${env.JOB_NAME} [${env.BUILD_NUMBER}] Successfull",
+	   subject: "${env.JOB_NAME} [${env.BUILD_NUMBER}] Failed",
            body: "${env.JOB_NAME} [${env.BUILD_NUMBER}] ${env.BUILD_URL}",
 		   to: "${env.DEFAULT_RECIPIENTS},devopstrainingblr@gmail.com"
             )		   
