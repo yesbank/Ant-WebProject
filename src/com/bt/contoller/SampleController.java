@@ -24,6 +24,6 @@ public class SampleController {
 		js.put("Technology", "DevOps ");
 
 		return js.toString();
-
 	}
+	
 }
