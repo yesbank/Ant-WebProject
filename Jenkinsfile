@@ -5,7 +5,7 @@ node{
  }
  
  stage('Build'){
-    // def mvnHome = tool 'maven3'
+    
     sh "ant -f build-mt.xml" 
  }
  stage('Send Email'){
