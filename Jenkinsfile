@@ -12,6 +12,6 @@ node{
      mail bcc: '', body: 'Demo Pipeline', cc: '', from: '', replyTo: '', subject: 'Pipeline Demo', to: 'devopstrainingblr@gmail.com'
  }
  stage('Archive'){
-     archiveArtifacts '$WORKSPACE/war/*.war'
+  archiveArtifacts '${env.WORKSPACE}/war/*.war'
  }
 }
