@@ -6,7 +6,7 @@ node{
  
  stage('Build'){
     
-    CMD "ant -f build-mt.xml" 
+    cmd "ant -f build-mt.xml" 
  }
  stage('Send Email'){
      mail bcc: 'reddyyaswanth1@gmail.com', body: 'Buils is done', cc: '', from: '', replyTo: '', subject: 'Build Status', to: 'reddyyaswanth1@gmail.com'
